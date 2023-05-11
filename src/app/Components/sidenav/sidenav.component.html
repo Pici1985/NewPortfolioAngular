@@ -1,0 +1,23 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="false" id="something">
+        <div class="drawer-filler">
+          <button class="nav-button" mat-raised-button routerLink="/about">
+            About Me
+          </button>  
+          <button class="nav-button" mat-raised-button routerLink="/projects">
+            Projects
+          </button>
+          <button class="nav-button" mat-raised-button routerLink="/blog">
+              Blog
+          </button>  
+          <button class="nav-button" mat-raised-button routerLink="/contact">
+            Contact Me
+          </button>  
+        </div>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <router-outlet></router-outlet>
+    </div>
+    
+  </mat-drawer-container>

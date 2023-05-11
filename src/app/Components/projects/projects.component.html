@@ -1,0 +1,24 @@
+
+<div class="list-container">
+    <h1 style="margin-top: 15px; ">My Projects</h1>
+    <div class="spinner-wrapper" *ngIf="!projectList">
+      <mat-spinner style="height: 30px"></mat-spinner>
+    </div>
+   
+    <mat-grid-list cols="4" rowHeight="350px" gutterSize="10px" >
+        <mat-grid-tile class="tile" *ngFor="let item of projectList" >
+            <mat-card class="example-card" matRipple (click)="myFunction( item.id )">
+              <img mat-card-image src="{{ item.imageUrl }}" >
+                <mat-card-header>
+                  <mat-card-title>{{ item.title }}</mat-card-title>
+                  <mat-card-subtitle>{{ item.description }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                  <div class="icon-wrapper">
+                    <img class="icon" *ngFor="let icon of item.icons" src="{{ icon }}" alt="">
+                  </div>
+                </mat-card-content>
+              </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -1,0 +1,12 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+#main-title-span{
+  cursor: pointer;
+}
+
+.logoWhite {
+  height: 25px;
+  margin: 0px 5px;
+}
