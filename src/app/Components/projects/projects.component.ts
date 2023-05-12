@@ -22,16 +22,16 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.projectListSubscription = this.ProjectsService.getProjects().subscribe((data: any) => {
       this.projectList = data;
     })
-    console.log("Works");
   }
 
   ngOnDestroy(): void {
     this.projectListSubscription.unsubscribe();
   }
 
+  // alternativs solution for getting data from service
   // ngOnInit(): void {
   //   this.projectList$ = this.ProjectsService.getProjects();
-  //   console.log("anyad");
+  //   console.log("works");
   // }
 
   myFunction(id : number) : void {

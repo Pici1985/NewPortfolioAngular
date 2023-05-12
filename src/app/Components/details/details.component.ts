@@ -19,7 +19,6 @@ export class DetailsComponent implements OnDestroy, OnInit{
       const projectId = +params['id'];
       this.projectListSubscription = this.ProjectsService.getProject(projectId).subscribe((data: any) => {
         this.project = data;
-        console.log(data);
       })
     });
   }
