@@ -1,1 +1,18 @@
-<p>blog works!</p>
+<div class="list-container">
+    <h1 style="margin-top: 15px; ">My Articles</h1>
+    <div class="spinner-wrapper" *ngIf="!postList">
+      <mat-spinner style="height: 30px"></mat-spinner>
+    </div>
+   
+    <mat-grid-list cols="4" rowHeight="400px" gutterSize="10px" >
+        <mat-grid-tile class="tile" *ngFor="let item of postList" >
+            <mat-card class="example-card" matRipple (click)="myFunction( item.id )">
+              <img mat-card-image src="{{ item.image }}" >
+                <mat-card-header>
+                  <mat-card-title>{{ item.title }}</mat-card-title>
+                  <mat-card-subtitle>{{ item.author }} - {{ item.date }}</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
