@@ -24,6 +24,7 @@ import { BlogComponent } from './Components/blog/blog.component';
 import { ProjectsComponent } from './Components/projects/projects.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { DetailsComponent } from './Components/details/details.component';
+import { BlogDetailsComponent } from './Components/blog-details/blog-details.component';
 
 
 
@@ -42,6 +43,7 @@ import { DetailsComponent } from './Components/details/details.component';
     ProjectsComponent,
     ContactComponent,
     DetailsComponent,
+    BlogDetailsComponent,
   ],
   imports: [
     BrowserModule,

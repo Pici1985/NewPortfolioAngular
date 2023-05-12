@@ -26,6 +26,6 @@ export class BlogComponent {
   }
 
   myFunction(id : number) : void {
-    console.log(id);
+    this.router.navigate(['/blog-details', id]); 
   }
 }

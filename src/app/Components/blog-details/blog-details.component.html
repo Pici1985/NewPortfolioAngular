@@ -1,0 +1,34 @@
+<!-- <mat-card style="margin: 100px 50px;">
+    <img style="width: 50%; height: 50%;" src="{{ post.image }}" alt="">
+    <p> {{ post.title }}</p>
+    {{ post.blogPost | json }}
+    <p> {{ post.date }}</p>
+    <p> {{ post.author }}</p>
+    <p> {{ post.photoOwner }}</p>
+    <p> {{ post.snippet }}</p>
+</mat-card> -->
+
+<div class="spinner-wrapper" *ngIf="!post">
+    <mat-spinner style="Height: 30px;"></mat-spinner>
+  </div>
+
+<div class="card-wrapper" *ngIf="post">
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title style="font-size: 30px; margin: 5px 0; text-align: center;">{{ post.title }}</mat-card-title>
+                <!-- <mat-card-subtitle style="font-size: 20px; margin: 5px 0; text-align: center;">{{ post.author }}</mat-card-subtitle>    -->
+                <img mat-card-lg-image src="{{ post.image }}" >
+            </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content style="margin-top: 10px;">
+            <div [innerHtml]="post.blogPost"></div>
+            <div style="display: flex; justify-content: space-between;">
+                <mat-card-subtitle> {{ post.date }}</mat-card-subtitle>
+                <mat-card-subtitle> {{ post.author }}</mat-card-subtitle>
+                <mat-card-subtitle> {{ post.photoOwner }}</mat-card-subtitle>
+            </div>
+        </mat-card-content>
+        
+    </mat-card>
+</div>
