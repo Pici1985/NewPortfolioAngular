@@ -5,10 +5,10 @@
   <!-- <img src="../../../assets/FinalLogoWhite.png" alt="" class="logoWhite"> -->
   <span id="main-title-span" routerLink="/">Balazs Ferencz Portfolio App</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="goBack()">
     <mat-icon>keyboard_arrow_left</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="goForward()">
     <mat-icon>keyboard_arrow_right</mat-icon>
   </button>
 </mat-toolbar>
