@@ -1,8 +1,8 @@
-<div class="card-wrapper">
-    <div class="spinner-wrapper" *ngIf="!project">
-        <mat-spinner style="height: 30px"></mat-spinner>
-      </div>
+<div class="spinner-wrapper" *ngIf="!project">
+    <mat-spinner style="Height: 30px;"></mat-spinner>
+  </div>
 
+<div class="card-wrapper" *ngIf="project">
     <mat-card class="card">
         <img mat-card-image src="{{ project.imageUrl }}" >
         <mat-card-header>
@@ -11,15 +11,32 @@
         </mat-card-header>
         <mat-card-content style="margin-top: 10px;">
             <p>{{ project.detail }}</p>
-            <div class="icon-wrapper">
-                <img class="icon" *ngFor="let icon of project.icons" src="{{ icon }}" alt="">
-            </div>
         </mat-card-content>
-        <mat-card-actions align="end">
-            <button mat-raised-button color="primary" style="margin: 0 5px;">See Project</button>
-            <button mat-raised-button color="primary" style="margin: 0 5px;">See Code</button>
-        </mat-card-actions>    
-
+        <div class="action-wrapper"> 
+            <mat-card-actions align="start" style="width: 50%;">
+                <div class="icon-wrapper">
+                    <img class="icon" *ngFor="let icon of project.icons" src="{{ icon }}" alt="">
+                </div>
+            </mat-card-actions>
+            <mat-card-actions align="end" style="width: 50%;">
+                <a mat-raised-button 
+                   *ngIf="project.liveUrl != null"
+                   color="primary" 
+                   style="margin: 0 5px;" 
+                   href="{{ project.liveUrl }}" 
+                   target="_blank">
+                   See Project
+                </a>
+                <a mat-raised-button
+                   *ngIf="project.gitHubUrl != null" 
+                   color="primary" 
+                   style="margin: 0 5px;" 
+                   href="{{ project.gitHubUrl}}" 
+                   target="_blank">
+                   See Code
+                </a>
+            </mat-card-actions>    
+        </div>
     </mat-card>
 </div>
 
