@@ -1,1 +1,29 @@
-<p>contact works!</p>
+<div class="wrapper">
+    <h1>Contact Form</h1>
+    <mat-card class="example-container">
+      <form [formGroup]="exampleForm" (ngSubmit)="onSubmit(formDirective)" #formDirective="ngForm" >
+        <mat-card-content>
+            <mat-form-field appearance="fill">
+              <mat-label>Your name:</mat-label>
+                <input matInput placeholder="Enter a name" formControlName="name" required>
+              <mat-error *ngIf="name">{{ errorMessage }}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Subject:</mat-label>
+                <input matInput placeholder="Enter a class" formControlName="subject" required>
+              <mat-error *ngIf="subject">{{errorMessage}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="numeric-field-item">
+              <mat-label>Your message:</mat-label>
+                <textarea matInput placeholder="Enter your message!" formControlName="message" required  rows="10"></textarea>
+                <mat-error *ngIf="message">{{errorMessage}}</mat-error>
+            </mat-form-field>
+            <button mat-fab extended color="primary" type="submit" [disabled]="exampleForm.invalid">
+              <mat-icon>mail</mat-icon>
+              Send
+            </button>
+          </mat-card-content>
+        </form>
+    </mat-card>
+</div>
+
