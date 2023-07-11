@@ -4,7 +4,7 @@
       <mat-spinner style="height: 30px"></mat-spinner>
     </div>
    
-    <mat-grid-list cols="4" rowHeight="400px" gutterSize="10px" >
+    <mat-grid-list cols={{nrOfColumns}} rowHeight="400px" gutterSize="10px" (window:resize)="onResize($event)">
         <mat-grid-tile class="tile" *ngFor="let item of postList" >
             <mat-card class="example-card" matRipple (click)="myFunction( item.id )">
               <img mat-card-image src="{{ item.image }}" >
