@@ -24,4 +24,8 @@ export class ToolbarOverviewExampleComponent {
   toggle() {
     this.toggleEvent.emit();
   }
+
+  openProfile() {
+    console.log("open profile");
+  }
 }

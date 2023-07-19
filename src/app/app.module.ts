@@ -25,9 +25,10 @@ import { ProjectsComponent } from './Components/projects/projects.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { DetailsComponent } from './Components/details/details.component';
 import { BlogDetailsComponent } from './Components/blog-details/blog-details.component';
+import { LoginComponent } from './Components/login/login.component';
+import { RegisterComponent } from './Components/register/register.component';
 
-
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -44,6 +45,8 @@ import { BlogDetailsComponent } from './Components/blog-details/blog-details.com
     ContactComponent,
     DetailsComponent,
     BlogDetailsComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { BlogDetailsComponent } from './Components/blog-details/blog-details.com
     HttpClientModule,
     MatFormFieldModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
