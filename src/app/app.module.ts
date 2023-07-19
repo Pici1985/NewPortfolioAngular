@@ -14,8 +14,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { SidenavComponent } from './Components/sidenav/sidenav.component';
-import { CharacterListComponent } from './Components/character-list/character-list.component';
-import { CreateCharacterComponent } from './Components/create-character/create-character.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -36,8 +34,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppComponent,
     ToolbarOverviewExampleComponent,
     SidenavComponent,
-    CharacterListComponent,
-    CreateCharacterComponent,
     HomePageComponent,
     AboutComponent,
     BlogComponent,

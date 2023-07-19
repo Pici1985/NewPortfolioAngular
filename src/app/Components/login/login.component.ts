@@ -1,6 +1,7 @@
 import { Input, Component, Output, EventEmitter } from '@angular/core';
 import { FormControl,FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { env } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +27,17 @@ export class LoginComponent {
   }
 
   onSubmit(formDirective: FormGroupDirective){
-    console.log(this.loginForm.value.email, this.loginForm.value.password);
+    const LIVEURL =  env.loginURL;
+
+    let user = {
+      username: this.loginForm.value.email,
+      password: this.loginForm.value.password
+    }
+    
+    this.http.post(LIVEURL, user).subscribe((response: any) => {
+      // ez necces
+      console.log(response);
+    });
     
     formDirective.resetForm();
     this.loginForm.reset();
