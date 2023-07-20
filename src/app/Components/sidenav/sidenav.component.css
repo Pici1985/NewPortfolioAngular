@@ -1,31 +1,30 @@
 .example-container {
-    width: auto;
-    height: calc(100vh - 64px);
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    background: rgb(239, 234, 234);
-  }
-  
+  width: auto;
+  height: calc(100vh - 64px);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: rgb(239, 234, 234);
+}
+
 .example-sidenav-content {
-    display: flex;
-    height: calc( 100vh - 80px);  
-    align-items: center;
-    justify-content: center;
-    background: rgb(239, 234, 234);
+  display: flex;
+  height: calc(100vh - 80px);
+  align-items: center;
+  justify-content: center;
+  background: rgb(239, 234, 234);
 }
 
 .example-sidenav {
-    padding: 20px;
+  padding: 20px;
 }
 
-.drawer-filler{
-    display: grid;
+.drawer-filler {
+  display: grid;
 }
 
 .nav-button {
-    margin: 5px 0px;
+  margin: 5px 0px;
 }
 
 mat-drawer {
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
-

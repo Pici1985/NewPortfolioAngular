@@ -1,20 +1,40 @@
 <mat-card>
-    <mat-card-header>
-      <mat-card-title>Register User</mat-card-title>
-    </mat-card-header>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(formDirective)" #formDirective="ngForm" >
-      <mat-card-content>
-        <mat-form-field>
-          <mat-label>Username:</mat-label>
-          <input matInput placeholder="Enter your Username:" formControlName="username" required>
-          <mat-error *ngIf="username">{{ errorMessage }}</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>Password:</mat-label>
-          <input matInput placeholder="Enter your password:" formControlName="password" required>
-          <mat-error *ngIf="password">{{ errorMessage }}</mat-error>
-        </mat-form-field>
-        <button mat-raised-button color="primary" [disabled]="registerForm.invalid">Register User</button>
-      </mat-card-content>
-    </form>
-  </mat-card>
+  <mat-card-header>
+    <mat-card-title>Register User</mat-card-title>
+  </mat-card-header>
+  <form
+    [formGroup]="registerForm"
+    (ngSubmit)="onSubmit(formDirective)"
+    #formDirective="ngForm"
+  >
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Username:</mat-label>
+        <input
+          matInput
+          placeholder="Enter your Username:"
+          formControlName="username"
+          required
+        />
+        <mat-error *ngIf="username">{{ errorMessage }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password:</mat-label>
+        <input
+          matInput
+          placeholder="Enter your password:"
+          formControlName="password"
+          required
+        />
+        <mat-error *ngIf="password">{{ errorMessage }}</mat-error>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="registerForm.invalid"
+      >
+        Register User
+      </button>
+    </mat-card-content>
+  </form>
+</mat-card>
